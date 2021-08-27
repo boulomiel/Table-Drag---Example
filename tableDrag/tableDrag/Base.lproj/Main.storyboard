@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tableDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-cY-50m">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="viK-cf-Xcu"/>
+                                </constraints>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1FM-7W-rLe">
+                                <rect key="frame" x="0.0" y="352" width="414" height="110"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCH-ct-FC9" userLabel="imageOne">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="110"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZA1-o8-T9N" userLabel="imageTwo">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="110"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fgf-gf-Gt0" userLabel="imageThree">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="110"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="dDC-8s-Dkk"/>
+                                    <constraint firstItem="ZA1-o8-T9N" firstAttribute="centerX" secondItem="1FM-7W-rLe" secondAttribute="centerX" id="eKa-WA-DTD"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iZg-9m-dnB">
+                                <rect key="frame" x="167" y="575" width="80" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HZY-bP-HLb"/>
+                                    <constraint firstAttribute="width" constant="80" id="nqz-Wo-LOy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1FM-7W-rLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jl3-2n-ASz"/>
+                            <constraint firstItem="gUI-cY-50m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q8i-ZM-13W"/>
+                            <constraint firstItem="gUI-cY-50m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZIi-kR-RNr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1FM-7W-rLe" secondAttribute="trailing" id="egK-fr-UYD"/>
+                            <constraint firstItem="iZg-9m-dnB" firstAttribute="top" secondItem="1FM-7W-rLe" secondAttribute="bottom" constant="113" id="i2N-Of-I5I"/>
+                            <constraint firstItem="iZg-9m-dnB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l9D-kZ-azs"/>
+                            <constraint firstItem="1FM-7W-rLe" firstAttribute="top" secondItem="gUI-cY-50m" secondAttribute="bottom" constant="8" symbolic="YES" id="uDz-bo-umT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gUI-cY-50m" secondAttribute="trailing" id="wkG-q9-znY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="1FM-7W-rLe" id="LWz-h4-8JR"/>
+                        <outlet property="draggableImageView" destination="iZg-9m-dnB" id="lxt-ka-iJz"/>
+                        <outlet property="imageOne" destination="FCH-ct-FC9" id="Puq-EP-AcX"/>
+                        <outlet property="imageThree" destination="Fgf-gf-Gt0" id="gOl-43-ibc"/>
+                        <outlet property="imageTwo" destination="ZA1-o8-T9N" id="SUK-ET-tlq"/>
+                        <outlet property="tableView" destination="gUI-cY-50m" id="huu-n3-JIo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scribble" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
